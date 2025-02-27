@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taverna Rabicho de Porco</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Taverna Rabicho de Porco</a>
+            <div>
+                <a href="dev.html" class="btn btn-outline-light">Desenvolvedores</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2 class="text-center">Registro de Aventureiros</h2>
+        <form id="character-form" class="p-3 rounded">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do Herói:</label>
+                <input type="text" class="form-control" id="nome" name="nome">
+            </div>
+            <div class="mb-3">
+                <label for="raca" class="form-label">Raça:</label>
+                <input type="text" class="form-control" id="raca" name="raca">
+            </div>
+            <div class="mb-3">
+                <label for="classe" class="form-label">Classe:</label>
+                <input type="text" class="form-control" id="classe" name="classe">
+            </div>
+            <div class="mb-3">
+                <label for="origem" class="form-label">Origem:</label>
+                <input type="text" class="form-control" id="origem" name="origem">
+            </div>
+            <div class="mb-3">
+                <label for="nivel" class="form-label">Nível:</label>
+                <input type="number" class="form-control" id="nivel" name="nivel">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Adicionar à Taverna</button>
+        </form>
+    </div>
+
+    <div class="container mt-4">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Nome</th>
+                    <th onclick="sortTable(1)">Raça</th>
+                    <th onclick="sortTable(2)">Classe</th>
+                    <th onclick="sortTable(3)">Origem</th>
+                    <th onclick="sortTable(4)">Nível</th>
+                </tr>
+            </thead>
+            <tbody id="character-table-body">
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>Professor: Marcelo Figueiredo Barbosa Jr.</p>
+        <p>Trabalho de Autoria Web - IFRN Campus Santa Cruz</p>
+        <p>Feito Por: Demétrio Cândido e Maria Alice</p>
+    </footer>
+
+</body>
+</html>
